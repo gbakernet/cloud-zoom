@@ -197,7 +197,7 @@
 				zoomDiv.fadeOut(300, function () {
                     ctx.fadedOut();
                 });																
-                return false;
+                event.preventDefault();
             });
             //////////////////////////////////////////////////////////////////////			
             $mouseTrap.bind('mouseenter', this, function (event) {
@@ -374,7 +374,7 @@
                     $('#' + data.useZoom + ' img').attr('src', event.data.data('relOpts').smallImage);
                     // Init a new zoom with the new images.				
                     $('#' + event.data.data('relOpts').useZoom).CloudZoom();
-                    return false;
+                    event.preventDefault();
                 });
             }
         });
